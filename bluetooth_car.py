@@ -5,7 +5,7 @@ import time #importing time
 uart= UART(0,9600)
 
 #OUT1  and OUT2
-In1=Pin(6,Pin.OUT)  #IN1
+In1=Pin(6,Pin.OUT)  #IN1`
 In2=Pin(7,Pin.OUT)  #IN2
 
 
@@ -14,7 +14,7 @@ In3=Pin(4,Pin.OUT)  #IN3
 In4=Pin(3,Pin.OUT)  #IN4
 
 #OUT5  and OUT6
-In5=Pin(17,Pin.OUT)  #IN1
+In5=Pin(17,Pin.OUT)  #IN1`
 In6=Pin(16,Pin.OUT)  #IN2
 
 #OUT7  and OUT8
@@ -133,5 +133,8 @@ while True:
             set_speed = float(speed[1])/100 * 65025
             EN_A.duty_u16(int(set_speed)) #Setting Duty Cycle
             EN_B.duty_u16(int(set_speed)) #Setting Duty Cycle
+            EN_C.duty_u16(int(set_speed)) #Setting Duty Cycle
+            EN_D.duty_u16(int(set_speed)) #Setting Duty Cycle
+                        
         else:
             stop() #Stop
